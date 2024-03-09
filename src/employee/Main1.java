@@ -9,40 +9,42 @@ class Employee {
     private String lastName;
     private String lavozimi;
 
+
     public Employee(String firstName, String lastName, String lavozimi) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.lavozimi = lavozimi;
     }
 
-    public String getFirstName() {
+        public String getFirstName () {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+        public void setFirstName (String firstName){
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+        public String getLastName () {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+        public void setLastName (String lastName){
         this.lastName = lastName;
     }
 
-    public String getLavozimi() {
+        public String getLavozimi () {
         return lavozimi;
     }
 
-    public void setLavozimi(String lavozimi) {
+        public void setLavozimi (String lavozimi){
         this.lavozimi = lavozimi;
     }
+
 }
 
 class Department {
-    private String name;
-    private List<Employee> employeeList;
+    private final String name;
+    private final List<Employee> employeeList;
 
     public Department(String name) {
         this.name = name;
@@ -63,8 +65,8 @@ class Department {
 }
 
 class Company {
-    private String name;
-    private List<Department> departmentList;
+    private final String name;
+    private final List<Department> departmentList;
 
     public void addCompany(Department department) {
         departmentList.add(department);
@@ -96,7 +98,7 @@ public class Main1 {
         String name = scanner.next();
         String lName = scanner.next();
         String position = scanner.next();
-        Employee employee = new Employee(name, lName,position);
+        Employee employee = new Employee(name, lName, position);
 
         department.addEmployee(employee);
         department1.addEmployee(employee);
